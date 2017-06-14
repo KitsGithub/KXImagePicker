@@ -1,7 +1,9 @@
 # KXImagePicker
 base to DNImagePicer <br/>
 大家多多交流，多多指教，遇到问题可以联系我QQ: 381377046 ，备注KXImagePicker 我会尽快优化<br/>
+
 基于DNImagePicker所做的封装,关于DNImagePicker可以查看源码：https://github.com/AwesomeDennis/DNImagePicker<br/>
+
 由于DNImagePicker 使用的是AssetsLibrary.framework，其在API已经不更新了，苹果推出了新的Photos.framework 因此，在此项目中把DNImagePicker中的AssetsLibrary框架 完全替换成Photos的框架<br/>
 
 同样的，在其基础上新增了类似于微信的视频编辑界面和缩略图预览
