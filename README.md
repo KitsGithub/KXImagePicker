@@ -3,7 +3,7 @@ base to DNImagePicer <br/>
 大家多多交流，多多指教，遇到问题可以联系我QQ: 381377046 ，备注KXImagePicker 我会尽快优化<br/>
 
 ## DEMO
-
+![image](https://github.com/KitsGithub/KXImagePicker/blob/master/Screenshots/ImagePickerScreenShot.gif)
 
 基于DNImagePicker所做的封装,关于DNImagePicker可以查看源码：https://github.com/AwesomeDennis/DNImagePicker<br/>
 
