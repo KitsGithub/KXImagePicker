@@ -11,36 +11,39 @@
 
 
 typedef void(^getFistImageBlock)(UIImage *image);
-@class ALAssetsFilter;
-FOUNDATION_EXTERN NSString *kDNImagePickerStoredGroupKey;
-
-
-UIKIT_EXTERN ALAssetsFilter * ALAssetsFilterFromDNImagePickerControllerFilterType(DNImagePickerFilterType type);
+@class PHAsset;
 
 @class DNImagePickerController;
 @protocol DNImagePickerControllerDelegate <NSObject>
 @optional
+
+
 /**
- *  imagePickerController‘s seleted photos
- *
- *  @param imagePickerController
- *  @param imageAssets           the seleted photos packaged DNAsset type instances
- *  @param fullImage             if the value is yes, the seleted photos is full image
+ 选择了照片之后回调
+
+ @param imagePicker picker
+ @param imageAssets 图片元数据数组
  */
 - (void)dnImagePickerController:(DNImagePickerController *)imagePicker
-                     sendImages:(NSArray *)imageAssets
+                     sendImages:(NSArray<PHAsset *> *)imageAssets
                     isFullImage:(BOOL)fullImage;
 
 
 /**
- 获取视频的代理方法
+ 视频编辑完后的回调
 
- @param imagePicker imagePicker
- @param videoImage  视频数据流
+ @param imagePicker picker
+ @param videoLoaclURLStr 视频编辑完保存的本地路径
  */
 - (void)dnImagePickerController:(DNImagePickerController *)imagePicker
                       sendVideo:(NSString *)videoLoaclURLStr;
 
+
+/**
+ 取消的点击
+
+ @param imagePicker picker
+ */
 - (void)dnImagePickerControllerDidCancel:(DNImagePickerController *)imagePicker;
 @end
 
